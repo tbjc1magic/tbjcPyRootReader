@@ -3,7 +3,7 @@ from setuptools import setup, Extension
 import os
 cwd = os.getcwd()
 print(cwd)
-module1 = Extension('tbjcPyRootReader',
+module = Extension('tbjcPyRootReader',
         sources = ['tbjcPyRootReader.cxx'],
         include_dirs=['/home/tbjc1magic/lsu_data/local/root/include',
                      cwd],
@@ -14,8 +14,8 @@ module1 = Extension('tbjcPyRootReader',
         language='c++11'
         )                    
 
-setup (name = 'PackageName',
+setup (name = 'tbjcPyRootConvertor',
         version = '1.0',
         description = 'This is a demo package',
-        ext_modules = [module1],
+        ext_modules = [module],
         )

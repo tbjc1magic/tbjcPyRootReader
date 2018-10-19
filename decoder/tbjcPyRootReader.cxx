@@ -88,9 +88,14 @@ PyObject* FileReader:: read(int idx)
     for(it=container.begin(); it!=container.end();it++)
     {
         PyObject* list = build_list(it->second, 16);
-        PyDict_SetItem(python_dict, Py_BuildValue("s",it->first), list);
+        PyObject* key = Py_BuildValue("s",it->first);
+        PyDict_SetItem(python_dict, key, list);
+        Py_DECREF(key);
+        Py_DECREF(list);
     }
-    
+   
+    //Py_DECREF(python_dict);
+
     return python_dict;
 }
 
