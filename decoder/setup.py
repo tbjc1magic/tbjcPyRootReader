@@ -14,7 +14,7 @@ module = Extension('tbjcPyRootReader',
         language='c++11'
         )                    
 
-setup (name = 'tbjcPyRootConvertor',
+setup (name = 'tbjcPyRootDecoder',
         version = '1.0',
         description = 'This is a demo package',
         ext_modules = [module],
