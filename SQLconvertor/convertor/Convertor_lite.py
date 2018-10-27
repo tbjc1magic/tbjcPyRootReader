@@ -6,7 +6,7 @@ from sqlalchemy import *
 from sqlalchemy import orm
 import numpy as np
 
-from model import Model
+from .model import Model
 import tbjcPyRootReader
 import time
 
